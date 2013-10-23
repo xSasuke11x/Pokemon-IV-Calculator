@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PokemonIVCalculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="title1">HP IV: </string>
+    <string name="submit">Submit</string>
+    <string name="title2">Attack IV: </string>
+    <string name="title3">Defense IV: </string>
+    <string name="hpStat">Base HP Value: </string>
+    <string name="title4">Special Attack IV: </string>
+    <string name="title5">Special Defense IV: </string>
+    <string name="title6">Speed IV: </string>
+    <string name="hpAt100">HP at Lv 100: </string>
+    <string name="N110">IV is for HP</string>
+    <string name="N5">IV is not HP</string>
+    <string name="hinder">Nature Hinder</string>
+    <string name="boost">Nature Boost</string>
+    <string name="normal">Nature Normal</string>
+
+</resources>
