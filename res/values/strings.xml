@@ -8,8 +8,8 @@
     <string name="title2">Attack IV: </string>
     <string name="title3">Defense IV: </string>
     <string name="hpStat">Base HP Value: </string>
-    <string name="title4">Special Attack IV: </string>
-    <string name="title5">Special Defense IV: </string>
+    <string name="title4">Sp. Attack IV: </string>
+    <string name="title5">Sp. Defense IV: </string>
     <string name="title6">Speed IV: </string>
     <string name="hpAt100">HP at Lv 100: </string>
     <string name="N110">Stat is HP</string>
@@ -22,5 +22,15 @@
     <string name="natureNormal">10</string>
     <string name="natureBoost">11</string>
     <string name="natureHinder">9</string>
+    <string name="attAt100">Attack at Lv 100: </string>
+    <string name="defAt100">Defense at Lv 100: </string>
+    <string name="spaAt100">Sp. Attack at Lv 100: </string>
+    <string name="spdAt100">Sp. Defense at Lv 100: </string>
+    <string name="speAt100">Speed at Lv 100: </string>
+    <string name="attStat">Base Attack Value: </string>
+    <string name="defStat">Base Defense Value: </string>
+    <string name="spaStat">Base Sp. Attack Value: </string>
+    <string name="spdStat">Base Sp. Defense Value: </string>
+    <string name="speStat">Base Speed Value: </string>
 
 </resources>
