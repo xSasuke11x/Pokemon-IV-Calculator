@@ -47,6 +47,8 @@ public final class R {
         public static final int main=0x7f070000;
     }
     public static final class string {
+        public static final int IVisHP=0x7f050010;
+        public static final int IVisNotHP=0x7f050011;
         public static final int N110=0x7f05000b;
         public static final int N5=0x7f05000c;
         public static final int action_settings=0x7f050001;
@@ -55,6 +57,9 @@ public final class R {
         public static final int hinder=0x7f05000d;
         public static final int hpAt100=0x7f05000a;
         public static final int hpStat=0x7f050006;
+        public static final int natureBoost=0x7f050013;
+        public static final int natureHinder=0x7f050014;
+        public static final int natureNormal=0x7f050012;
         public static final int normal=0x7f05000f;
         public static final int submit=0x7f050003;
         public static final int title1=0x7f050002;

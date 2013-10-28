@@ -49,6 +49,7 @@
         android:text="@string/hpStat"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
+    <requestFocus />
     <EditText
         android:id="@+id/editTextHPStat"
         android:layout_width="wrap_content"
@@ -57,8 +58,6 @@
         android:layout_toRightOf="@+id/textViewHPStat"
         android:ems="10"
         android:inputType="number" >
-
-        <requestFocus />
     </EditText>
 
     <LinearLayout
@@ -81,13 +80,15 @@
                 android:id="@+id/radioButton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/N110" />
+                android:text="@string/N110"
+                android:tag="@string/IVisHP" />
 
             <RadioButton
                 android:id="@+id/radioButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/N5" />
+                android:text="@string/N5"
+                android:tag="@string/IVisNotHP" />
         </RadioGroup>
 
         <RadioGroup
@@ -102,19 +103,22 @@
                 android:id="@+id/radioButton5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/normal" />
+                android:text="@string/normal"
+                android:tag="@string/natureNormal" />
 
             <RadioButton
                 android:id="@+id/radioButton4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/boost" />
+                android:text="@string/boost"
+                android:tag="@string/natureBoost" />
 
             <RadioButton
                 android:id="@+id/radioButton3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/hinder" />
+                android:text="@string/hinder"
+                android:tag="@string/natureHinder" />
         </RadioGroup>
     </LinearLayout>
 

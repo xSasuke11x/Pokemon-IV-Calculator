@@ -12,10 +12,15 @@
     <string name="title5">Special Defense IV: </string>
     <string name="title6">Speed IV: </string>
     <string name="hpAt100">HP at Lv 100: </string>
-    <string name="N110">IV is for HP</string>
-    <string name="N5">IV is not HP</string>
+    <string name="N110">Stat is HP</string>
+    <string name="N5">Stat is not HP</string>
     <string name="hinder">Nature Hinder</string>
     <string name="boost">Nature Boost</string>
     <string name="normal">Nature Normal</string>
+    <string name="IVisHP">110</string>
+    <string name="IVisNotHP">5</string>
+    <string name="natureNormal">10</string>
+    <string name="natureBoost">11</string>
+    <string name="natureHinder">9</string>
 
 </resources>
