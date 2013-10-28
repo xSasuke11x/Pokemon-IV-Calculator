@@ -17,7 +17,8 @@ public class MainActivity extends Activity {
 	Button mButton;
 	EditText HPIV, AttIV, DefIV, SpAIV, SpDIV, SpeIV, HPBase,
 			 AttBase, DefBase, SpABase, SpDBase, SpeBase;
-	TextView HPIVText, HPBaseText, AttIVText, AttBasetext;
+	TextView HPIVText, HPBaseText, AttIVText, AttBasetext, DefIVText, DefBaseText,
+			 SpAIVText, SpABaseText, SpDIVText, SpDBasetext, SpeIVText, SpeBaseText;
 	RadioButton b1 = null;
 	RadioButton b2 = null;
 	
@@ -78,18 +79,42 @@ public class MainActivity extends Activity {
 	    		
 	    		HPIV = (EditText) findViewById(R.id.editTextHP100);
 	    		AttIV = (EditText) findViewById(R.id.editTextAtt100);
+	    		DefIV = (EditText) findViewById(R.id.editTextDef100);
+	    		SpAIV = (EditText) findViewById(R.id.editTextSpA100);
+	    		SpDIV = (EditText) findViewById(R.id.editTextSpD100);
+	    		SpeIV = (EditText) findViewById(R.id.editTextSpe100);
 	    		
 	    		HPIVText = (TextView) findViewById(R.id.textViewTitle1);
 	    		AttIVText = (TextView) findViewById(R.id.textViewTitle2);
+	    		DefIVText = (TextView) findViewById(R.id.textViewTitle3);
+	    		SpAIVText = (TextView) findViewById(R.id.textViewTitle4);
+	    		SpDIVText = (TextView) findViewById(R.id.textViewTitle5);
+	    		SpeIVText = (TextView) findViewById(R.id.textViewTitle6);
 	    		
 	    		HPBase = (EditText) findViewById(R.id.editTextHPStat);
 	    		AttBase = (EditText) findViewById(R.id.editTextAttStat);
+	    		DefBase = (EditText) findViewById(R.id.editTextDefStat);
+	    		SpABase = (EditText) findViewById(R.id.editTextSpAStat);
+	    		SpDBase = (EditText) findViewById(R.id.editTextSpDStat);
+	    		SpeBase = (EditText) findViewById(R.id.editTextSpeStat);
 	    		
 	    		String hpVal1 = HPIV.getText().toString().trim();
 	    		String hpVal2 = HPBase.getText().toString().trim();
 	    		
 	    		String attVal1 = AttIV.getText().toString().trim();
 	    		String attVal2 = AttBase.getText().toString().trim();
+	    		
+	    		String defVal1 = DefIV.getText().toString().trim();
+	    		String defVal2 = DefBase.getText().toString().trim();
+	    		
+	    		String spaVal1 = SpAIV.getText().toString().trim();
+	    		String spaVal2 = SpABase.getText().toString().trim();
+	    		
+	    		String spdVal1 = SpDIV.getText().toString().trim();
+	    		String spdVal2 = SpDBase.getText().toString().trim();
+	    		
+	    		String speVal1 = SpeIV.getText().toString().trim();
+	    		String speVal2 = SpeBase.getText().toString().trim();
 
                 if (!hpVal1.equals("")) {
                     float hpValAt100 = Integer.parseInt(hpVal1);
@@ -106,6 +131,38 @@ public class MainActivity extends Activity {
                     float attFinalVal2 = (float) attFinalVal - ((2 * attValAtBase) + Integer.parseInt(b1.getTag().toString()));
                     
                     AttIVText.setText("Att IV: " + attFinalVal2);
+                }
+                if (!defVal1.equals("")) {
+                	float defValAt100 = Integer.parseInt(defVal1);
+                    float defValAtBase = Integer.parseInt(defVal2);
+                    float defFinalVal = (float) Math.ceil(((defValAt100 * 10) / Integer.parseInt(b2.getTag().toString())));
+                    float defFinalVal2 = (float) defFinalVal - ((2 * defValAtBase) + Integer.parseInt(b1.getTag().toString()));
+                    
+                    DefIVText.setText("Def IV: " + defFinalVal2);
+                }
+                if (!spaVal1.equals("")) {
+                	float spaValAt100 = Integer.parseInt(spaVal1);
+                    float spaValAtBase = Integer.parseInt(spaVal2);
+                    float spaFinalVal = (float) Math.ceil(((spaValAt100 * 10) / Integer.parseInt(b2.getTag().toString())));
+                    float spaFinalVal2 = (float) spaFinalVal - ((2 * spaValAtBase) + Integer.parseInt(b1.getTag().toString()));
+                    
+                    SpAIVText.setText("SpA IV: " + spaFinalVal2);
+                }
+                if (!spdVal1.equals("")) {
+                	float spdValAt100 = Integer.parseInt(spdVal1);
+                    float spdValAtBase = Integer.parseInt(spdVal2);
+                    float spdFinalVal = (float) Math.ceil(((spdValAt100 * 10) / Integer.parseInt(b2.getTag().toString())));
+                    float spdFinalVal2 = (float) spdFinalVal - ((2 * spdValAtBase) + Integer.parseInt(b1.getTag().toString()));
+                    
+                    SpDIVText.setText("SpD IV: " + spdFinalVal2);
+                }
+                if (!speVal1.equals("")) {
+                	float speValAt100 = Integer.parseInt(speVal1);
+                    float speValAtBase = Integer.parseInt(speVal2);
+                    float speFinalVal = (float) Math.ceil(((speValAt100 * 10) / Integer.parseInt(b2.getTag().toString())));
+                    float speFinalVal2 = (float) speFinalVal - ((2 * speValAtBase) + Integer.parseInt(b1.getTag().toString()));
+                    
+                    SpeIVText.setText("Spe IV: " + speFinalVal2);
                 }
 	    		
 	    		/*HPIV = (EditText)findViewById(R.id.editTextStats100);
