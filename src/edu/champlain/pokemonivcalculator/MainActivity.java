@@ -164,23 +164,9 @@ public class MainActivity extends Activity {
                     
                     SpeIVText.setText("Spe IV: " + speFinalVal2);
                 }
-	    		
-	    		/*HPIV = (EditText)findViewById(R.id.editTextStats100);
-	    		HPIVText = (TextView)findViewById(R.id.textViewTitle1);
-	    		HPIVText.setText("HP IV: "+HPIV.getText().toString());
-	    		
-	    		AttackIV = (EditText)findViewById(R.id.editTextBaseStats);
-	    		AttackIVText = (TextView)findViewById(R.id.textViewTitle2);
-	    		AttackIVText.setText("Attack IV: "+AttackIV.getText().toString());
-	    		
-	    		DefenseIV = (EditText)findViewById(R.id.editTextHPStat);
-	    		DefenseIVText = (TextView)findViewById(R.id.textViewTitle3);
-	    		DefenseIVText.setText("Defense IV: "+DefenseIV.getText().toString());*/
 	    	}
 	    });
 	}
-	
-	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
