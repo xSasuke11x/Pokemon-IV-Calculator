@@ -15,8 +15,9 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 public class MainActivity extends Activity {
 
 	Button mButton;
-	EditText HPIV, HPBase;
-	TextView HPIVText, HPBaseText;
+	EditText HPIV, AttIV, DefIV, SpAIV, SpDIV, SpeIV, HPBase,
+			 AttBase, DefBase, SpABase, SpDBase, SpeBase;
+	TextView HPIVText, HPBaseText, AttIVText, AttBasetext;
 	RadioButton b1 = null;
 	RadioButton b2 = null;
 	
@@ -43,21 +44,6 @@ public class MainActivity extends Activity {
 					b1.setTag("5");
 		            Toast.makeText(MainActivity.this, "You've selected: " + b1.getTag(), Toast.LENGTH_LONG).show();
 					break;
-				case R.id.radioButton5:
-					// Now you can get the text or whatever you want from the "selected" radio button
-			        b2.setTag("10");
-			        Toast.makeText(MainActivity.this, "You've selected: " + b2.getTag(), Toast.LENGTH_LONG).show();
-			        break;
-				case R.id.radioButton4:
-			        // Now you can get the text or whatever you want from the "selected" radio button
-			        b2.setTag("11");
-			        Toast.makeText(MainActivity.this, "You've selected: " + b2.getTag(), Toast.LENGTH_LONG).show();
-			        break;
-				case R.id.radioButton3:
-			        // Now you can get the text or whatever you want from the "selected" radio button
-			        b2.setTag("9");
-			        Toast.makeText(MainActivity.this, "You've selected: " + b2.getTag(), Toast.LENGTH_LONG).show();
-			        break;
 				}
 			}
 		});
@@ -68,17 +54,14 @@ public class MainActivity extends Activity {
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				switch(checkedId) {
 				case R.id.radioButton5:
-					// Now you can get the text or whatever you want from the "selected" radio button
 			        b2.setTag("10");
 			        Toast.makeText(MainActivity.this, "You've selected: " + b2.getTag(), Toast.LENGTH_LONG).show();
 			        break;
 				case R.id.radioButton4:
-			        // Now you can get the text or whatever you want from the "selected" radio button
 			        b2.setTag("11");
 			        Toast.makeText(MainActivity.this, "You've selected: " + b2.getTag(), Toast.LENGTH_LONG).show();
 			        break;
 				case R.id.radioButton3:
-			        // Now you can get the text or whatever you want from the "selected" radio button
 			        b2.setTag("9");
 			        Toast.makeText(MainActivity.this, "You've selected: " + b2.getTag(), Toast.LENGTH_LONG).show();
 			        break;
@@ -94,19 +77,35 @@ public class MainActivity extends Activity {
 	    	public void onClick(View view) {
 	    		
 	    		HPIV = (EditText) findViewById(R.id.editTextHP100);
-	    		HPIVText = (TextView) findViewById(R.id.textViewTitle1);
-	    		HPBase = (EditText) findViewById(R.id.editTextHPStat);
+	    		AttIV = (EditText) findViewById(R.id.editTextAtt100);
 	    		
-	    		String edtval = HPIV.getText().toString().trim();
-	    		String edtval2 = HPBase.getText().toString().trim();
+	    		HPIVText = (TextView) findViewById(R.id.textViewTitle1);
+	    		AttIVText = (TextView) findViewById(R.id.textViewTitle2);
+	    		
+	    		HPBase = (EditText) findViewById(R.id.editTextHPStat);
+	    		AttBase = (EditText) findViewById(R.id.editTextAttStat);
+	    		
+	    		String hpVal1 = HPIV.getText().toString().trim();
+	    		String hpVal2 = HPBase.getText().toString().trim();
+	    		
+	    		String attVal1 = AttIV.getText().toString().trim();
+	    		String attVal2 = AttBase.getText().toString().trim();
 
-                if(!edtval.equals("")) {
-                    float valAt100 = Integer.parseInt(edtval);
-                    float valAtBase = Integer.parseInt(edtval2);
-                    float finalVal = (float) Math.ceil(((valAt100 * 10) / Integer.parseInt(b2.getTag().toString())));
-                    float finalVal2 = (float) finalVal - ((2 * valAtBase) + Integer.parseInt(b1.getTag().toString()));
+                if (!hpVal1.equals("")) {
+                    float hpValAt100 = Integer.parseInt(hpVal1);
+                    float hpValAtBase = Integer.parseInt(hpVal2);
+                    float hpFinalVal = (float) Math.ceil(((hpValAt100 * 10) / Integer.parseInt(b2.getTag().toString())));
+                    float hpFinalVal2 = (float) hpFinalVal - ((2 * hpValAtBase) + Integer.parseInt(b1.getTag().toString()));
                     
-                    HPIVText.setText("HP IV: " + finalVal2);
+                    HPIVText.setText("HP IV: " + hpFinalVal2);
+                }
+                if (!attVal1.equals("")) {
+                	float attValAt100 = Integer.parseInt(attVal1);
+                    float attValAtBase = Integer.parseInt(attVal2);
+                    float attFinalVal = (float) Math.ceil(((attValAt100 * 10) / Integer.parseInt(b2.getTag().toString())));
+                    float attFinalVal2 = (float) attFinalVal - ((2 * attValAtBase) + Integer.parseInt(b1.getTag().toString()));
+                    
+                    AttIVText.setText("Att IV: " + attFinalVal2);
                 }
 	    		
 	    		/*HPIV = (EditText)findViewById(R.id.editTextStats100);
